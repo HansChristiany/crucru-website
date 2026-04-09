@@ -1,0 +1,23 @@
+{
+  "name": "crush-website",
+  "version": "1.0.0",
+  "description": "A beautiful profile showcase website",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "profile",
+    "showcase",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {}
+}

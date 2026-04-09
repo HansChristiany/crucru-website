@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: crush-website
+    env: node
+    branch: main
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: PORT
+        value: 10000
