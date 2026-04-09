@@ -21,7 +21,7 @@ app.get('/api/profile', (req, res) => {
 
 Academically driven, she remains focused and dedicated to her studies, consistently striving for excellence and self-improvement. Her discipline and commitment highlight her determination to achieve her goals while maintaining balance in her life.
 
-What makes her truly remarkable is the subtle yet profound impact she has on others. Even the slightest movement or gesture from her radiates a sense of joy and comfort, effortlessly bringing happiness to those who admire her. Her presence alone serves as a quiet inspiration proof that sincerity, faith, and positivity can leave a lasting impression.`,
+What makes her truly remarkable is the subtle yet profound impact she has on others. Even the slightest movement or gesture from her radiates a sense of joy and comfort, effortlessly bringing happiness to those who admire her. Her presence alone serves as a quiet inspirationproof that sincerity, faith, and positivity can leave a lasting impression.`,
     photo: '/images/ryn.jpg',
     hobbies: ['Watching Kdrama', 'Roblox', 'ML'],
     quote: 'Isaiah 60:22',

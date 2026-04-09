@@ -114,26 +114,32 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--accent-color);
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-brand {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: var(--primary-color);
 }
 
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -412,9 +418,24 @@ body {
     padding: 2rem;
     width: min(90%, 720px);
     max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
     position: relative;
     text-align: left;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 105, 180, 0.35);
+    border-radius: 999px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 235, 245, 0.6);
 }
 
 .gallery-modal-content {
@@ -603,8 +624,21 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
     .nav-links {
-        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        gap: 0.9rem;
+        padding: 0.5rem 0;
+    }
+
+    .nav-links a {
+        white-space: nowrap;
+        font-size: 0.95rem;
+        padding: 0.15rem 0.5rem;
     }
 
     .hero h1 {
@@ -631,5 +665,19 @@ body {
     .social-icon {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-popup-card img {
+        max-height: 280px;
+    }
+
+    .modal-description,
+    .gallery-popup-caption p,
+    .media-card p {
+        font-size: 0.95rem;
     }
 }
