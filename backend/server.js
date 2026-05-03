@@ -38,7 +38,17 @@ app.get('/api/gallery', (req, res) => {
     photos: [
       { id: 1, url: '/images/pic1.jpg', caption: 'Photo 1' },
       { id: 2, url: '/images/pic2.jpg', caption: 'Photo 2' },
-      { id: 3, url: '/images/pic3.jpg', caption: 'Photo 3' }
+      { id: 3, url: '/images/pic3.jpg', caption: 'Photo 3' },
+      { id: 4, url: '/images/pic4.jpg', caption: 'Photo 4' },
+      { id: 5, url: '/images/pic5.jpg', caption: 'Photo 5' },
+      { id: 6, url: '/images/pic6.jpg', caption: 'Photo 6' },
+      { id: 7, url: '/images/pic7.jpg', caption: 'Photo 7' },
+      { id: 8, url: '/images/pic8.jpg', caption: 'Photo 8' },
+      { id: 9, url: '/images/pic9.jpg', caption: 'Photo 9' },
+      { id: 10, url: '/images/pic10.jpg', caption: 'Photo 10' },
+      { id: 11, url: '/images/pic11.jpg', caption: 'Photo 11' },
+      { id: 12, url: '/images/pic12.jpg', caption: 'Photo 12' },
+      { id: 13, url: '/images/pic13.jpg', caption: 'Photo 13' }
     ]
   });
 });

@@ -10,10 +10,10 @@
     <div id="welcomeOverlay" class="welcome-overlay">
         <div class="welcome-card">
             <div class="welcome-image-wrapper">
-                <img src="images/pink.jpg" alt="Pink bouquet" class="welcome-image">
+                <img src="images/flower.jpg" alt="Elegant blue flower" class="welcome-image">
             </div>
             <h1>Welcome</h1>
-            <p class="welcome-text">Have a great day!</p>
+            <p class="welcome-text">Discover a refined, calming profile experience.</p>
             <button id="closeWelcome" class="welcome-button">Enter</button>
         </div>
     </div>
@@ -101,6 +101,20 @@ What makes her truly remarkable is the subtle yet profound impact she has on oth
             <h3 id="modalTitle">Watched Kdramas</h3>
             <p id="modalDescription" class="modal-description">A curated selection of her favorite series, each paired with a cover-style preview and title.</p>
             <div id="mediaGrid" class="media-grid"></div>
+        </div>
+    </div>
+
+    <div id="fullGalleryModal" class="modal hidden">
+        <div class="modal-content full-gallery-modal">
+            <button id="closeFullGallery" class="modal-close">✕</button>
+            <h2>All Photos</h2>
+            <div id="fullGalleryGrid" class="full-gallery-grid"></div>
+            <div id="galleryLightbox" class="gallery-lightbox hidden">
+                <button id="closeLightbox" class="modal-close lightbox-close">✕</button>
+                <button id="prevPhoto" class="lightbox-nav prev">❮</button>
+                <img id="lightboxImage" src="" alt="Photo preview">
+                <button id="nextPhoto" class="lightbox-nav next">❯</button>
+            </div>
         </div>
     </div>
 

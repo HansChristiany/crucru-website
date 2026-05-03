@@ -206,6 +206,96 @@ function setupGalleryModal() {
   });
 }
 
+// Setup full gallery modal
+function setupFullGalleryModal() {
+  const fullGalleryModal = document.getElementById('fullGalleryModal');
+  const closeFullGalleryBtn = document.getElementById('closeFullGallery');
+  const viewGalleryBtn = document.getElementById('viewGalleryBtn');
+  const closeLightboxBtn = document.getElementById('closeLightbox');
+  const prevPhotoBtn = document.getElementById('prevPhoto');
+  const nextPhotoBtn = document.getElementById('nextPhoto');
+  const lightbox = document.getElementById('galleryLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+
+  if (!fullGalleryModal || !viewGalleryBtn) return;
+
+  let allPhotos = [];
+  let currentPhotoIndex = 0;
+
+  // Fetch and display all photos in grid
+  async function loadFullGallery() {
+    try {
+      const response = await fetch('/api/gallery');
+      const data = await response.json();
+      allPhotos = data.photos;
+
+      const fullGalleryGrid = document.getElementById('fullGalleryGrid');
+      fullGalleryGrid.innerHTML = '';
+
+      allPhotos.forEach((photo, index) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-thumb';
+        item.innerHTML = `<img src="${photo.url}" alt="${photo.caption}">`;
+        item.addEventListener('click', () => {
+          currentPhotoIndex = index;
+          openLightbox();
+        });
+        fullGalleryGrid.appendChild(item);
+      });
+    } catch (error) {
+      console.error('Error loading full gallery:', error);
+    }
+  }
+
+  function openLightbox() {
+    lightboxImage.src = allPhotos[currentPhotoIndex].url;
+    lightbox.classList.remove('hidden');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+  }
+
+  function showPrevPhoto() {
+    currentPhotoIndex = (currentPhotoIndex - 1 + allPhotos.length) % allPhotos.length;
+    lightboxImage.src = allPhotos[currentPhotoIndex].url;
+  }
+
+  function showNextPhoto() {
+    currentPhotoIndex = (currentPhotoIndex + 1) % allPhotos.length;
+    lightboxImage.src = allPhotos[currentPhotoIndex].url;
+  }
+
+  viewGalleryBtn.addEventListener('click', () => {
+    loadFullGallery();
+    fullGalleryModal.classList.remove('hidden');
+  });
+
+  closeFullGalleryBtn.addEventListener('click', () => {
+    fullGalleryModal.classList.add('hidden');
+    closeLightbox();
+  });
+
+  closeLightboxBtn.addEventListener('click', closeLightbox);
+  prevPhotoBtn.addEventListener('click', showPrevPhoto);
+  nextPhotoBtn.addEventListener('click', showNextPhoto);
+
+  fullGalleryModal.addEventListener('click', (event) => {
+    if (event.target === fullGalleryModal) {
+      fullGalleryModal.classList.add('hidden');
+      closeLightbox();
+    }
+  });
+
+  // Keyboard navigation for lightbox
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'ArrowLeft') showPrevPhoto();
+    if (e.key === 'ArrowRight') showNextPhoto();
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
+
 // Initialize on page load
 function setupWelcomeOverlay() {
   const overlay = document.getElementById('welcomeOverlay');
@@ -224,4 +314,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModal();
   setupGalleryModal();
   setupWelcomeOverlay();
+  setupFullGalleryModal();
 });
