@@ -22,7 +22,7 @@ app.get('/api/profile', (req, res) => {
 Academically driven, she remains focused and dedicated to her studies, consistently striving for excellence and self-improvement. Her discipline and commitment highlight her determination to achieve her goals while maintaining balance in her life.
 
 What makes her truly remarkable is the subtle yet profound impact she has on others. Even the slightest movement or gesture from her radiates a sense of joy and comfort, effortlessly bringing happiness to those who admire her. Her presence alone serves as a quiet inspirationproof that sincerity, faith, and positivity can leave a lasting impression.`,
-    photo: '/images/ryn.jpg',
+    photo: '/images/profile.jpg',
     hobbies: ['Watching Kdrama', 'Roblox', 'ML'],
     quote: 'Isaiah 60:22',
     socialLinks: {
@@ -48,7 +48,11 @@ app.get('/api/gallery', (req, res) => {
       { id: 10, url: '/images/pic10.jpg', caption: 'Photo 10' },
       { id: 11, url: '/images/pic11.jpg', caption: 'Photo 11' },
       { id: 12, url: '/images/pic12.jpg', caption: 'Photo 12' },
-      { id: 13, url: '/images/pic13.jpg', caption: 'Photo 13' }
+      { id: 13, url: '/images/pic13.jpg', caption: 'Photo 13' },
+      { id: 14, url: '/images/pic14.jpg', caption: 'Photo 14' },
+      { id: 15, url: '/images/pic15.jpg', caption: 'Photo 15' },
+      { id: 16, url: '/images/pic16.jpg', caption: 'Photo 16' },
+      { id: 17, url: '/images/pic17.jpg', caption: 'Photo 17' }
     ]
   });
 });

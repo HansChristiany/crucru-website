@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Showcase</title>
+    <title>Cassiane's Blue Profile</title>
+    <meta name="description" content="A soft blue profile showcase celebrating Cassiane's favorite moments, interests, and elegant style.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,14 +14,22 @@
                 <img src="images/flower.jpg" alt="Elegant blue flower" class="welcome-image">
             </div>
             <h1>Welcome</h1>
-            <p class="welcome-text">Discover a refined, calming profile experience.</p>
+            <p class="welcome-text">This is for you only!</p>
             <button id="closeWelcome" class="welcome-button">Enter</button>
         </div>
     </div>
+
+    <div id="tulipModal" class="modal hidden">
+        <div class="modal-content flower-modal">
+            <button id="closeTulipModal" class="modal-close">✕</button>
+            <img src="images/tulip.jpg" alt="Blue tulip bouquet" class="tulip-popup-image">
+            <p class="tulip-caption">Flowers for you</p>
+        </div>
+    </div>
+
     <div class="container">
-        <!-- Navigation -->
         <nav class="navbar">
-            <div class="nav-brand">💕 Profile</div>
+            <div class="nav-brand">💕 Cassiane</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#hobbies">Interests</a></li>
@@ -29,28 +38,46 @@
             </ul>
         </nav>
 
-        <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
-                <img id="profileImage" src="images/ryn.jpg" alt="Profile" class="profile-image">
+                <img id="profileImage" src="images/profile.jpg" alt="Profile" class="profile-image">
                 <h1 id="profileName">Cassiane Ryn Engresso</h1>
                 <p id="profileQuote" class="quote">"Isaiah 60:22"</p>
+                <p class="hero-tagline">She is a girl full of joy and kindness.</p>
+                <div class="hero-actions">
+                    <a href="#gallery" class="button primary">Explore the Gallery</a>
+                    <a href="#about" class="button secondary">Learn About Her</a>
+                </div>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section about-section">
             <h2>About</h2>
             <div class="about-content">
-                <p id="profileBio">She is a joyful and cheerful individual whose presence naturally uplifts those around her. Her positive outlook in life is reflected in the way she carries herself with grace, kindness, and genuine warmth. Grounded in strong faith, she is God-fearing, allowing her beliefs to guide her decisions, values, and daily actions.
-
-Academically driven, she remains focused and dedicated to her studies, consistently striving for excellence and self-improvement. Her discipline and commitment highlight her determination to achieve her goals while maintaining balance in her life.
-
-What makes her truly remarkable is the subtle yet profound impact she has on others. Even the slightest movement or gesture from her radiates a sense of joy and comfort, effortlessly bringing happiness to those who admire her. Her presence alone serves as a quiet inspiration proof that sincerity, faith, and positivity can leave a lasting impression.</p>
+                <p id="profileBio">She is a joyful and cheerful individual whose presence naturally uplifts those around her. Her positive outlook in life is reflected in the way she carries herself with grace, kindness, and genuine warmth. Grounded in strong faith, she is God-fearing, allowing her beliefs to guide her decisions, values, and daily actions.</p>
+                <p>Academically driven, she remains focused and dedicated to her studies, consistently striving for excellence and self-improvement. Her discipline and commitment highlight her determination to achieve her goals while maintaining balance in her life.</p>
+                <p>What makes her truly remarkable is the subtle yet profound impact she has on others. Even the slightest movement or gesture from her radiates a sense of joy and comfort, effortlessly bringing happiness to those who admire her. Her presence alone serves as a quiet inspiration proof that sincerity, faith, and positivity can leave a lasting impression.</p>
             </div>
         </section>
 
-        <!-- Hobbies Section -->
+        <section id="highlights" class="section highlights-section">
+            <h2>Little Joys</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Blue & Beach</h3>
+                    <p>She loves blue, beach days, and collecting shells and starfish by the shore.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Kdrama Comfort</h3>
+                    <p>Cozy nights watching Kdramas are one of her favorite ways to relax.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Strawberry Rebisco</h3>
+                    <p>She enjoys strawberry-flavored Rebisco biscuits, and her caring, helpful spirit makes home feel warm and calm.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="hobbies" class="section hobbies-section">
             <h2>Interests & Hobbies</h2>
             <div id="hobbiesList" class="hobbies-grid">
@@ -69,29 +96,27 @@ What makes her truly remarkable is the subtle yet profound impact she has on oth
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section id="gallery" class="section gallery-section">
-            <h2>Photo Gallery</h2>
-            <div id="photoGallery" class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/placeholder.jpg" alt="Gallery item">
-                </div>
+            <div class="section-header">
+                <h2>Photo Gallery</h2>
+                <button id="viewGalleryBtn" class="button outline">View All Photos</button>
             </div>
+            <p class="section-subtitle">A curated collection of gentle memories, styled with soft blue accents and modern layout.</p>
+            <div id="photoGallery" class="gallery-grid"></div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section contact-section">
             <h2>Connect</h2>
+            <p class="contact-text">Would you like to send a sweet message or stay in touch? These links are set up for friendly connection.</p>
             <div class="social-links">
                 <a href="#" class="social-icon">📱 Instagram</a>
                 <a href="#" class="social-icon">🐦 Twitter</a>
-                <a href="#" class="social-icon">💼 LinkedIn</a>
+                <a href="#" class="social-icon">💌 Message</a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2024 Profile Showcase. Made with 💕</p>
+            <p>&copy; 2024 Profile Showcase. Made with care and soft blue styling.</p>
         </footer>
     </div>
 

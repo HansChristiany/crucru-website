@@ -300,11 +300,30 @@ function setupFullGalleryModal() {
 function setupWelcomeOverlay() {
   const overlay = document.getElementById('welcomeOverlay');
   const button = document.getElementById('closeWelcome');
+  const tulipModal = document.getElementById('tulipModal');
 
-  if (!overlay || !button) return;
+  if (!overlay || !button || !tulipModal) return;
 
   button.addEventListener('click', () => {
     overlay.classList.add('hidden');
+    tulipModal.classList.remove('hidden');
+  });
+}
+
+function setupTulipModal() {
+  const tulipModal = document.getElementById('tulipModal');
+  const closeTulipModal = document.getElementById('closeTulipModal');
+
+  if (!tulipModal || !closeTulipModal) return;
+
+  closeTulipModal.addEventListener('click', () => {
+    tulipModal.classList.add('hidden');
+  });
+
+  tulipModal.addEventListener('click', (event) => {
+    if (event.target === tulipModal) {
+      tulipModal.classList.add('hidden');
+    }
   });
 }
 
@@ -314,5 +333,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupModal();
   setupGalleryModal();
   setupWelcomeOverlay();
+  setupTulipModal();
   setupFullGalleryModal();
 });
