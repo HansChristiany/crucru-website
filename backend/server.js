@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 // API Routes
 app.get('/api/profile', (req, res) => {
   res.json({
-    name: 'Cassiane Ryn Engresso',
+    name: 'Ella Mae N. Engreso',
     bio: `She is a joyful and cheerful individual whose presence naturally uplifts those around her. Her positive outlook in life is reflected in the way she carries herself with grace, kindness, and genuine warmth. Grounded in strong faith, she is God-fearing, allowing her beliefs to guide her decisions, values, and daily actions.
 
 Academically driven, she remains focused and dedicated to her studies, consistently striving for excellence and self-improvement. Her discipline and commitment highlight her determination to achieve her goals while maintaining balance in her life.
